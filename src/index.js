@@ -1,18 +1,13 @@
-import "@babel/polyfill";
-import React from "react";
+import "babel-polyfill";
 import express from "express";
-const app = express();
 import { renderToString } from "react-dom/server";
-import { StaticRouter } from "react-router-dom";
-import Routes from './Client/Routes/Routes';
 
+import renderer from "./helpers/renderer";
+
+const app = express();
 app.use(express.static("public"));
 app.get("*", (req, res) => {
-  const content = renderToString(
-    <StaticRouter location={req.path} context={{}}>
-      <Routes />
-    </StaticRouter>
-  );
+  const content = renderToString(renderer(req));
   const html = `<html>
       <body>
         <div id="root">${content}</div>
@@ -23,5 +18,6 @@ app.get("*", (req, res) => {
 });
 
 app.listen(3001, () => {
+  // eslint-disable-next-line no-console
   console.log("listeing to PORT 3001");
 });
