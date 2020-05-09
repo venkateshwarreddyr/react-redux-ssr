@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import HomePage from "../src/Client/containers/HomePage";
-import LoginPage from './../src/Client/containers/LoginPage';
+import HomePage from './../containers/HomePage/HomePage';
+import LoginPage from './../containers/LoginPage/LoginPage';
 
 const Routes = () => {
   return(

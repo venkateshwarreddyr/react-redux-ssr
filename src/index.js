@@ -4,7 +4,7 @@ import express from "express";
 const app = express();
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom";
-import Routes from "../Routes/Routes";
+import Routes from './Client/Routes/Routes';
 
 app.use(express.static("public"));
 app.get("*", (req, res) => {
