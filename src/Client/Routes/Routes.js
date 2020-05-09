@@ -1,13 +1,22 @@
-import React from "react";
-import { Route } from "react-router-dom";
 import HomePage from "../containers/HomePage/HomePage";
 import LoginPage from "../containers/LoginPage/LoginPage";
+import UsersList, { loadData } from "../containers/UsersList";
 
-const Routes = () => (
-  <div>
-    <Route path="/" exact component={HomePage} />
-    <Route path="/login" component={LoginPage} />
-  </div>
-);
+const Routes = [
+  {
+    path: "/",
+    component: HomePage,
+    exact: true,
+  },
+  {
+    path: "/login",
+    component: LoginPage,
+  },
+  {
+    loadData,
+    path: "/users",
+    component: UsersList,
+  },
+];
 
 export default Routes;
