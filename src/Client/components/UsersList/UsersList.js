@@ -5,9 +5,7 @@ const UsersList = ({ users, fetchUsers }) => {
   useEffect(() => {
     fetchUsers();
   }, []);
-  useEffect(() => {
-    console.log({ users, fetchUsers });
-  }, [users]);
+
   const renderUser = () => users.map((user) => <li>{user.username}</li>);
   return (
     <>
