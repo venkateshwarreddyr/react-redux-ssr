@@ -17,7 +17,7 @@ app.get("*", (req, res) => {
     res.send(renderer(req, store));
   });
 });
-const PORT = process.env.PORT || 30001
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
   console.log("listeing to PORT " + PORT);
