@@ -1,6 +1,8 @@
 const path = require("path");
 const merge = require("webpack-merge");
 const baseConfig = require("./webpack.base.js");
+const webpackNodeExternals = require("webpack-node-externals");
+
 // const htmlWebpack = require("html-webpack-plugin");
 // const webpack = require("webpack");
 const config = {
@@ -21,6 +23,7 @@ const config = {
   //     },
   //   ],
   // },
+  externals: [webpackNodeExternals()]
 };
 
 module.exports = merge(baseConfig, config);
