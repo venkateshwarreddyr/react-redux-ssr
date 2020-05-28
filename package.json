@@ -16,7 +16,7 @@
     "prod:build-client": "webpack --config webpack.client.js",
     "prod:build-server": "webpack --config webpack.server.js",
     "prod:server": "node build/bundle.js",
-    "start": "node /build/bundle.js"
+    "start": "node build/bundle.js"
   },
   "author": "",
   "license": "ISC",
