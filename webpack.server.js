@@ -5,7 +5,7 @@ const webpackNodeExternals = require("webpack-node-externals");
 // const htmlWebpack = require("html-webpack-plugin");
 // const webpack = require("webpack");
 const config = {
-  mode:"development",
+  mode: "development",
   target: "node",
   entry: "./src/index.js",
   output: {

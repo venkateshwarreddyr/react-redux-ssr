@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { StaticRouter } from "react-router-dom";
 import { renderToString } from "react-dom/server";
 import serialize from "serialize-javascript";
-import Routes from "../Client/Routes/Routes";
+import Routes from "../client/Routes/Routes";
 
 export default (req, store) => {
   const content = renderToString(
