@@ -16,7 +16,7 @@
     "prod:build-client": "webpack --config webpack.client.js",
     "prod:build-server": "webpack --config webpack.server.js",
     "prod:server": "node ./build/bundle.js",
-    "start": "node npm-run-all prod:"
+    "start": "npm run prod:build-client && npm run prod:build-server && npm run prod:server"
   },
   "author": "",
   "license": "ISC",
