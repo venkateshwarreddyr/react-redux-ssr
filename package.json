@@ -10,10 +10,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm-run-all --parallel dev:*",
-    "dev:server": "nodemon --watch build --exec \"node build/bundle.js \"",
+    "dev:server": "node --watch build --exec \"node build/bundle.js \"",
     "dev:build-server": "webpack --config webpack.server.js --watch",
     "dev:build-client": "webpack --config webpack.client.js --watch",
-    "start": "npm-run-all --parallel dev:*"
+    "prod:build-server": "webpack --config webpack.server.js",
+    "prod:build-client": "webpack --config webpack.client.js",
+    "prod:server": "node build/bundle.js",
+    "start": "npm-run-all prod:*"
   },
   "author": "",
   "license": "ISC",
