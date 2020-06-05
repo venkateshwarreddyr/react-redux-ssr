@@ -11,4 +11,5 @@ install:
   - npm run prod:build-client
 script:
   - nohup npm run prod:server &
+  - sleep 3
   - npm run test
