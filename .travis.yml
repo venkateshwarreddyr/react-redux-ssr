@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  -"10"
+dist: trusty
+cache:
+  directories:
+    - node_modules
+install:
+  - npm i
+  - npm run prod:build-server
+  - npm run prod:build-client
+script:
+  - nohup npm run prod:server
