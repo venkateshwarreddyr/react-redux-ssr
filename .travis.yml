@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 8
+  - 10
 dist: trusty
 cache:
   directories:
@@ -10,4 +10,4 @@ install:
   - npm run prod:build-server
   - npm run prod:build-client
 script:
-  - nohup npm run prod:server
+  - nohup npm run prod:server &
